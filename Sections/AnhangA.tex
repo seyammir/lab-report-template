@@ -1,0 +1,447 @@
+\section{Berechnungen}\label{appA}
+
+\large \textbf{Abschnitt 2: Ohmsches Gesetz}
+
+Tabelle \ref{tab:K2T3}:
+\begin{align*}
+    I &= \frac{U}{R}=\frac{\SI{2}{V}}{\SI{100}{\Omega}}=\SI{0,02}{mA}=\SI{20}{mA}\\
+    I &= \frac{U}{R}=\frac{\SI{2}{V}}{\SI{300}{\Omega}}=\SI{0,00667}{mA}=\SI{6,67}{mA}
+\end{align*}
+Tabelle \ref{tab:K2T4}:
+\begin{align*}
+    I &= \frac{U}{R}=\frac{\SI{12}{V}}{\SI{100}{\Omega}}=\SI{0,12}{mA}=\SI{120}{mA}\\
+    I &= \frac{U}{R}=\frac{\SI{8}{V}}{\SI{100}{\Omega}}=\SI{0,08}{mA}=\SI{80}{mA}\\
+    I &= \frac{U}{R}=\frac{\SI{4}{V}}{\SI{100}{\Omega}}=\SI{0,04}{mA}=\SI{40}{mA}
+\end{align*}
+
+\large \textbf{Abschnitt 3: Mischen von Serien- und Parallelschaltungen}
+
+Tabelle \ref{tab:K3T1}:
+\begin{align*}
+    R_{\text{ges}} &= R_1 + R_2 + \frac{R_3 \cdot R_4}{R_3 + R_4} = 22 \, \Omega + 100 \, \Omega + \frac{680 \, \Omega \cdot 330 \, \Omega}{680 \, \Omega + 330 \, \Omega} \\
+    &= 122 \, \Omega + \frac{224400 \, \Omega^2}{1010 \, \Omega} = 122 \, \Omega + 222.18 \, \Omega = 344.18 \, \Omega
+\end{align*}
+\begin{align*}
+    I_{\text{ges}} &= \frac{U}{R_{\text{ges}}} = \frac{10 \, \mathrm{V}}{344.18 \, \Omega} = 0.02905 \, \mathrm{A} \, =29.05 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    I_1 &= I_{\text{ges}} \cdot \frac{R_3}{R_3 + R_4} = 0.02905 \, \mathrm{A} \cdot \frac{680 \, \Omega}{680 \, \Omega + 330 \, \Omega} \\
+    &= 0.02905 \, \mathrm{A} \cdot \frac{680 \, \Omega}{1010 \, \Omega} = 0.01956 \, \mathrm{A} \, = 19.56 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    U_{R1} &= I_{\text{ges}} \cdot R_1 = 0.02905 \, \mathrm{A} \cdot 22 \, \Omega = 0.6391 \, \mathrm{V}
+\end{align*}
+
+\large \textbf{Abschnitt 4: Unbelasteter Spannungsteiler}
+
+Tabelle \ref{tab:K3T2}:
+\begin{align*}
+    R_2 &= R \cdot \frac{\alpha}{10} = 1 \, \mathrm{k\Omega} \cdot \frac{1}{10} = 0.1 \, \mathrm{k\Omega} = 100 \, \Omega \\
+    R_1 &= R \cdot \left( 1 - \frac{\alpha}{10} \right) = 1 \, \mathrm{k\Omega} \cdot \left( 1 - \frac{1}{10} \right) = 0.9 \, \mathrm{k\Omega} = 900 \, \Omega
+\end{align*}
+\begin{align*}
+    U_2 &= U_{\text{in}} \cdot \frac{R_2}{R_1 + R_2} = 10 \, \mathrm{V} \cdot \frac{100 \, \Omega}{100 \, \Omega + 900 \, \Omega} = 10 \, \mathrm{V} \cdot \frac{100}{1000} = 1 \, \mathrm{V} \\
+    U_1 &= U_{\text{in}} \cdot \frac{R_1}{R_1 + R_2} = 10 \, \mathrm{V} \cdot \frac{900 \, \Omega}{100 \, \Omega + 900 \, \Omega} = 10 \, \mathrm{V} \cdot \frac{900}{1000} = 9 \, \mathrm{V}
+\end{align*}
+
+\large \textbf{Abschnitt 5: Belasteter Spannungsteiler}
+
+Tabelle \ref{tab:K4T2}:
+\begin{align*}
+    R_{\text{ers}} &= \frac{R_2 \cdot R_3}{R_2 + R_3} 
+    = \frac{100 \, \Omega \cdot 100 \, \Omega}{100 \, \Omega + 100 \, \Omega} 
+    = \frac{10000 \, \Omega^2}{200 \, \Omega} 
+    = 50 \, \Omega
+\end{align*}
+\begin{align*}
+    R_{\text{ges}} &= R_1 + R_{\text{ers}} 
+    = 900 \, \Omega + 50 \, \Omega 
+    = 950 \, \Omega
+\end{align*}
+\begin{align*}
+    I_{\text{ges}} &= \frac{U_{\text{in}}}{R_{\text{ges}}} 
+    = \frac{5 \, \mathrm{V}}{950 \, \Omega} 
+    = 0.00526 \, \mathrm{A} \, (5.26 \, \mathrm{mA}).
+\end{align*}
+\begin{align*}
+    U_3 &= I_{\text{ges}} \cdot R_{\text{ers}} 
+    = 0.00526 \, \mathrm{A} \cdot 50 \, \Omega 
+    = 0.263 \, \mathrm{V}
+\end{align*}
+
+\vspace{4cm}
+
+\large \textbf{Abschnitt 6: Spannungs- und Strommessung}
+
+Tabelle \ref{tab:K6T1}:
+\begin{align*}
+    R_{\text{errechnet}} &= \frac{U}{I} = \frac{4.78 \, \mathrm{V}}{481 \, \mathrm{mA}} = \frac{4.78 \, \mathrm{V}}{0.481 \, \mathrm{A}} = 9.94 \, \Omega
+\end{align*}
+\begin{align*}
+    R_{\text{errechnet}} &= \frac{U}{I} = \frac{4.9800 \, \mathrm{V}}{0.0054 \, \mathrm{mA}} = \frac{4.9800 \, \mathrm{V}}{5.4 \cdot 10^{-6} \, \mathrm{A}} = 0.9220 \cdot 10^6 \, \Omega
+\end{align*}
+
+Tabelle \ref{tab:K6T2}:
+\begin{align*}
+    R_{\text{errechnet}} &= \frac{U}{I} = \frac{4.76 \, \mathrm{V}}{475 \, \mathrm{mA}} = \frac{4.76 \, \mathrm{V}}{0.475 \, \mathrm{A}} = 10.02 \, \Omega
+\end{align*}
+\begin{align*}
+    R_{\text{errechnet}} &= \frac{U}{I} = \frac{4.9600 \, \mathrm{V}}{0.0048 \, \mathrm{mA}} = \frac{4.9600 \, \mathrm{V}}{4.8 \cdot 10^{-6} \, \mathrm{A}} = 1.0300 \cdot 10^6 \, \Omega
+\end{align*}
+
+\large \textbf{Abschnitt 7: Ersatzspannungsquelle}
+
+Tabelle \ref{tab:K7T1}:
+\begin{align*}
+    I_K &= \frac{U_0}{R_i} = \frac{5 \, \mathrm{V}}{22 \, \Omega} = 0.2273 \, \mathrm{A} \, (227.3 \, \mathrm{mA})
+\end{align*}
+
+Tabelle \ref{tab:K7T2}:
+\begin{align*}
+    I_L &= \frac{U_0}{R_L + R_i} = \frac{5 \, \mathrm{V}}{100 \, \Omega + 22 \, \Omega} = \frac{5 \, \mathrm{V}}{122 \, \Omega} = 0.04098 \, \mathrm{A} = 40.98 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    U_L &= U_0 - I_L \cdot R_i = 5 \, \mathrm{V} - 0.04098 \, \mathrm{A} \cdot 22 \, \Omega \\
+    &= 5 \, \mathrm{V} - 0.902 \, \mathrm{V} = 4.10 \, \mathrm{V}
+\end{align*}
+
+\large \textbf{Abschnitt 8: Reihenschaltung von Spannungsquellen}
+
+Tabelle \ref{tab:K8T1}:
+\begin{align*}
+    U_{ges}=\rho_1-\rho_2=5\,\unit{V}-(-15\,\unit{V})=20\,\unit{V}
+\end{align*}
+
+\large \textbf{Abschnitt 9: Parallelschaltung von Spannungsquellen}
+
+Tabelle \ref{tab:K9T1}:\\
+Leerlauf:
+\begin{align*}
+    I_0 &= \frac{U_{01} - U_{02}}{R_{i1} + R_{i2}} = \frac{15 - 15}{100 + 100} = 0 \, \mathrm{A}
+\end{align*}
+Lastfall:
+\begin{align*}
+    I_L &= \frac{U_{01} \cdot R_{i2} + U_{02} \cdot R_{i1}}{R_{i1} \cdot R_{i2} + R_{i1} \cdot R_L + R_{i2} \cdot R_L} \\
+    &= \frac{15 \cdot 100 + 15 \cdot 100}{100 \cdot 100 + 100 \cdot 1000 + 100 \cdot 1000} \\
+    &= \frac{1500 + 1500}{10000 + 100000 + 100000} \\
+    &= \frac{3000}{210000} \\
+    &= 0.01429 \, \mathrm{A} = 14.29 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    U_{12} &= I_L \cdot R_L= 0.01429 \, \mathrm{A} \cdot 1000 \, \Omega = 14.29 \, \mathrm{V}
+\end{align*}
+
+Tabelle \ref{tab:K9T2}:\\
+Leerlauf:
+\begin{align*}
+    I_0 &= \frac{U_{01} - U_{02}}{R_{i1} + R_{i2}}= \frac{15 - 10}{100 + 100}= \frac{5}{200} = 0.025 \, \mathrm{A}= 25 \, \mathrm{mA}
+\end{align*}
+Lastfall:
+\begin{align*}
+    I_L &= \frac{15 \cdot 100 + 10 \cdot 100}{100 \cdot 100 + 100 \cdot 1000 + 100 \cdot 1000} \\
+    &= \frac{1500 + 1000}{10000 + 100000 + 100000} = \frac{2500}{210000} \\
+    &= 0.01190 \, \mathrm{A} = 11.90 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    U_{12} &= I_L \cdot R_L= 0.01190 \, \mathrm{A} \cdot 1000 \, \Omega = 11.90 \, \mathrm{V}
+\end{align*}
+
+\large \textbf{Abschnitt 10: Schaltvorgänge in Kondensatoren}
+
+Tabelle \ref{tab:K10T1}:
+\begin{align*}
+    \tau &= R \cdot C = 4.7 \, \mathrm{k\Omega} \cdot 0.22 \, \mathrm{\mu F} \\
+    &= 4.7 \cdot 10^3 \, \Omega \cdot 0.22 \cdot 10^{-6} \, \mathrm{F} \\
+    &= 1.034 \, \mathrm{ms}
+\end{align*}
+\begin{align*}
+    u_C(t) &= U \cdot \left( 1 - e^{-\frac{t}{\tau}} \right) = 6 \, \mathrm{V} \cdot \left( 1 - e^{-\frac{2 \, \mathrm{ms}}{1 \, \mathrm{ms}}} \right) \\
+    &= 6 \, \mathrm{V} \cdot \left( 1 - e^{-2} \right) = 6 \, \mathrm{V} \cdot \left( 1 - 0.1353 \right) \\
+    &= 6 \, \mathrm{V} \cdot 0.8647 = 5.19 \, \mathrm{V}
+\end{align*}
+\begin{align*}
+    i_C(t) &= \frac{u_s}{R} \cdot e^{-\frac{t}{\tau}} = \frac{6 \, \mathrm{V}}{4.7 \, \mathrm{k\Omega}} \cdot e^{-\frac{2.5 \, \mathrm{ms}}{1.034 \, \mathrm{ms}}} = 1.276 \, \mathrm{mA} \cdot e^{-2.418} \\
+    &= 1.276 \, \mathrm{mA} \cdot 0.0890 = 0.1136 \, \mathrm{mA}
+\end{align*}
+
+\large \textbf{Abschnitt 11: Schaltvorgänge in Spulen}
+
+Tabelle \ref{tab:K11T1}:
+\begin{align*}
+    \tau &= \frac{L}{R} = \frac{10 \, \mathrm{mH}}{100 \, \Omega} = 0.1 \, \mathrm{ms}
+\end{align*}
+\begin{align*}
+    u_L(t) &= U \cdot e^{-\frac{t}{\tau}} = 6 \, \mathrm{V} \cdot e^{-\frac{0.20 \, \mathrm{ms}}{0.1 \, \mathrm{ms}}} \\
+&= 6 \, \mathrm{V} \cdot e^{-2} = 6 \, \mathrm{V} \cdot 0.1353 \\
+    &= 0.81 \, \mathrm{V}
+\end{align*}
+\begin{align*}
+    i_L(t) &= I \cdot \left( 1 - e^{-\frac{t}{\tau}} \right) = \frac{U}{R} \cdot \left( 1 - e^{-\frac{t}{\tau}} \right) \\
+    &= \frac{6 \, \mathrm{V}}{1 \, \mathrm{k\Omega}} \cdot \left( 1 - e^{-\frac{0.25 \, \mathrm{ms}}{0.1 \, \mathrm{ms}}} \right) = 0.006 \, \mathrm{A} \cdot \left( 1 - e^{-2.5} \right) \\
+    &= 0.006 \, \mathrm{A} \cdot \left( 1 - 0.0821 \right) = 0.006 \, \mathrm{A} \cdot 0.9179 \\
+    &= 0.00551 \, \mathrm{A} = 5.51 \, \mathrm{mA}
+\end{align*}
+
+\large \textbf{Abschnitt 12: Lade- und Entladevorgang Kondensator}
+
+Tabelle \ref{tab:K12T1}:
+\begin{align*}
+    \tau &= R \cdot C = 4.7 \, \mathrm{k\Omega} \cdot 0.22 \, \mathrm{\mu F} \\
+    &= 4.7 \cdot 10^3 \, \Omega \cdot 0.22 \cdot 10^{-6} \, \mathrm{F} \\
+    &= 1.034 \, \mathrm{ms}
+\end{align*}
+\begin{align*}
+    u_C(t) &= u_s \cdot \left( 1 - e^{-\frac{t}{\tau}} \right) = 6 \, \mathrm{V} \cdot \left( 1 - e^{-\frac{2 \, \mathrm{ms}}{1.034 \, \mathrm{ms}}} \right) \\
+    &= 6 \, \mathrm{V} \cdot \left( 1 - e^{-1.935} \right) = 6 \, \mathrm{V} \cdot \left( 1 - 0.1446 \right) \\
+    &= 6 \, \mathrm{V} \cdot 0.8554 = 5.13 \, \mathrm{V}
+\end{align*}
+\begin{align*}
+    i_C(t) &= \frac{u_s}{R} \cdot e^{-\frac{t}{\tau}} = \frac{6 \, \mathrm{V}}{4.7 \, \mathrm{k\Omega}} \cdot e^{-\frac{2.5 \, \mathrm{ms}}{1.034 \, \mathrm{ms}}} = 1.276 \, \mathrm{mA} \cdot e^{-2.418} \\
+    &= 1.276 \, \mathrm{mA} \cdot 0.0890 = 0.1136 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    Q &= C \cdot u_C(t) = 0.22 \, \mathrm{\mu F} \cdot 6 \, \mathrm{V} \cdot \left( 1 - e^{-\frac{5 \, \mathrm{ms}}{1.034 \, \mathrm{ms}}} \right) \\
+    &= 0.22 \cdot 10^{-6} \, \mathrm{F} \cdot 6 \, \mathrm{V} \cdot \left( 1 - e^{-4.836} \right) \\
+    &= 0.22 \cdot 10^{-6} \, \mathrm{F} \cdot 6 \, \mathrm{V} \cdot \left( 1 - 0.0079 \right) \\
+    &= 0.22 \cdot 10^{-6} \, \mathrm{F} \cdot 6 \, \mathrm{V} \cdot 0.9921 = 1.31 \, \mathrm{\mu C}
+\end{align*}
+
+\large \textbf{Abschnitt 13: Phasenverschiebung Kondensator}
+
+Tabelle \ref{tab:T13PV}:
+\begin{align*}
+    \omega &= 2 \pi f = 2 \pi \cdot 1 \, \mathrm{kHz} = 6283.19 \, \mathrm{rad/s}
+\end{align*}
+\begin{align*}
+    T &= \frac{1}{f} = \frac{1}{1 \, \mathrm{kHz}} = 1 \, \mathrm{ms}
+\end{align*}
+\begin{align*}
+    \varphi &= \frac{\Delta t}{T} \cdot 360^\circ = \frac{0.24 \, \mathrm{ms}}{1 \, \mathrm{ms}} \cdot 360^\circ \\
+    &= 0.24 \cdot 360^\circ = 86.4^\circ
+\end{align*}
+
+\large \textbf{Abschnitt 14: Kapazitiver Blindwiderstand}
+
+Tabelle \ref{tab:K14T1}:
+\begin{align*}
+    X_C &= \frac{1}{2 \pi \cdot 0.1 \cdot 10^3 \, \mathrm{Hz} \cdot 1 \cdot 10^{-6} \, \mathrm{F}} \\
+    &= \frac{1}{2 \pi \cdot 0.1 \cdot 10^{-3}} = \frac{1}{0.000628} \\
+    &= 1.59 \, \mathrm{k\Omega}
+\end{align*}
+\begin{align*}
+    I_C &= \frac{U_R}{R} = \frac{4.3 \, \mathrm{V}}{1 \, \mathrm{k\Omega}} = 4.3 \, \mathrm{mA}
+\end{align*}
+
+\large \textbf{Abschnitt 15: Blindleistung eines Kondensators}
+
+Tabelle \ref{tab:K15T1}:
+\begin{align*}
+    q_C &= u_C \cdot i_C = (-1.6 \, \mathrm{V}) \cdot (1.5 \, \mathrm{mA}) = -1.6 \cdot 0.0015 \, \mathrm{W} \\
+    &= -0.0024 \, \mathrm{W} = -2.4 \, \mathrm{mvar}
+\end{align*}
+
+\vspace{2cm}
+
+\large \textbf{Abschnitt 16: Lade- und Entladevorgang einer Spule}
+
+Tabelle \ref{tab:K16T1}:
+\begin{align*}
+    \tau &= \frac{L}{R} = \frac{0.1 \, \mathrm{H}}{1000 \, \Omega} = 0.1 \, \mathrm{ms}
+\end{align*}
+\begin{align*}
+    I &= \frac{u_s}{R} = \frac{6 \, \mathrm{V}}{1000 \, \Omega} = 0.006 \, \mathrm{A} \, (6 \, \mathrm{mA})
+\end{align*}
+\begin{align*}
+    i_L(t) &= 6 \, \mathrm{mA} \cdot \left( 1 - e^{-\frac{0.2 \, \mathrm{ms}}{0.1 \, \mathrm{ms}}} \right) = 6 \, \mathrm{mA} \cdot \left( 1 - e^{-2} \right) \\
+    &= 6 \, \mathrm{mA} \cdot \left( 1 - 0.1353 \right) = 6 \, \mathrm{mA} \cdot 0.8647 \\
+    &= 5.188 \, \mathrm{mA}
+\end{align*}
+
+\large \textbf{Abschnitt 17: Phasenverschiebung Spule}
+
+\begin{align*}
+    \varphi &= \frac{\Delta t}{T} \cdot 360^\circ = \frac{0.25 \, \mathrm{ms}}{1 \, \mathrm{ms}} \cdot 360^\circ = 0.25 \cdot 360^\circ = 90^\circ
+\end{align*}
+
+\large \textbf{Abschnitt 18: Parallelschaltung von RL}
+
+Tabelle \ref{tab:K18T1}:
+\begin{align*}
+    G &= \frac{1}{R} = \frac{1}{1000 \, \Omega} = 0.001 \, \mathrm{S} = 1 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+    \omega &= 2 \pi f = 2 \pi \cdot 1000 \, \mathrm{Hz} = 6283.19 \, \mathrm{rad/s}
+\end{align*}
+\begin{align*}
+    B_L &= \frac{1}{\omega \cdot L} = \frac{1}{6283.19 \, \mathrm{rad/s} \cdot 0.1 \, \mathrm{H}} \\
+    &= \frac{1}{628.32} = 0.00159 \, \mathrm{S} = 1.59 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+    Y &= \sqrt{(0.001)^2 + (0.00159)^2} = \sqrt{0.000001 + 0.00000253} \\
+    &= \sqrt{0.00000353} = 0.00188 \, \mathrm{S} =1.88 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+    I_R &= \frac{U_\mathrm{eff}}{R} = \frac{5 \, \mathrm{V}}{1000 \, \Omega} = 0.005 \, \mathrm{A} = 5.0 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    X_L &= \omega \cdot L = 2 \pi f \cdot L \\
+    &= 2 \pi \cdot 1000 \, \mathrm{Hz} \cdot 0.1 \, \mathrm{H} = 628.32 \, \Omega
+\end{align*}
+\begin{align*}
+    I_L &= \frac{U_\mathrm{eff}}{X_L} = \frac{5 \, \mathrm{V}}{628.32 \, \Omega} \\
+    &= 0.00796 \, \mathrm{A} = 7.96 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    I &= \sqrt{I_R^2 + I_L^2} = \sqrt{(5.0 \, \mathrm{mA})^2 + (7.96 \, \mathrm{mA})^2} \\
+    &= \sqrt{25.0 + 63.36} \, \mathrm{mA} = \sqrt{88.36} \, \mathrm{mA} = 9.4 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    \sin \varphi &= \frac{I_L}{I} = \frac{7.96 \, \mathrm{mA}}{9.4 \, \mathrm{mA}} = 0.847
+\end{align*}
+\begin{align*}
+    \varphi &= \arcsin(0.847) = 57.87^\circ
+\end{align*}
+
+
+\large \textbf{Abschnitt 19: Reihenschaltung von RC}
+
+Tabelle \ref{tab:K19T1}:
+\begin{align*}
+    X_C &= \frac{1}{2 \pi \cdot 1000 \, \mathrm{Hz} \cdot 0.22 \cdot 10^{-6} \, \mathrm{F}} = \frac{1}{2 \pi \cdot 0.00022} \\
+    &= \frac{1}{0.001382} = 723.43 \, \mathrm{\Omega}
+\end{align*}
+\begin{align*}
+    Z &= \sqrt{(1000 \, \Omega)^2 + (723.43 \, \Omega)^2} \\
+    &= \sqrt{1000000 + 523344}\, \mathrm{\Omega} = \sqrt{1523344}\, \mathrm{\Omega} \\
+    &= 1234.3 \, \mathrm{\Omega} = 1.23 \, \mathrm{k\Omega}
+\end{align*}
+\begin{align*}
+    I &= \frac{5 \, \mathrm{V}}{1234.3 \, \mathrm{\Omega}} = 0.00405 \, \mathrm{A} = 4.05 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    U_R &= 4.05 \, \mathrm{mA} \cdot 1000 \, \mathrm{\Omega} = 4.05 \, \mathrm{V}
+\end{align*}
+\begin{align*}
+    U_C &= 4.05 \, \mathrm{mA} \cdot 723.43 \, \mathrm{\Omega} = 2.93 \, \mathrm{V}
+\end{align*}
+\begin{align*}
+    \tan \varphi &= \frac{723.43}{1000} = 0.723
+\end{align*}
+\begin{align*}
+    \varphi &= \arctan(0.723) = 35.8^\circ
+\end{align*}
+
+\large \textbf{Abschnitt 20: Wirk-, Blind- und Scheinleistung}
+
+Tabelle \ref{tab:K20T1}:
+\begin{align*}
+    G &= \frac{1}{R} = \frac{1}{470 \, \Omega} = 0.00213 \, \mathrm{S} = 2.13 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+\omega &= 2 \pi f \\
+     &= 2 \pi \cdot 1000 \, \mathrm{Hz} = 6283.19 \, \mathrm{rad/s} \\
+    B_C &= \omega \cdot C \\
+    &= 6283.19 \, \mathrm{rad/s} \cdot 0.47 \cdot 10^{-6} \, \mathrm{F} = 0.00295 \, \mathrm{S} \, = 2.95 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+    B_L &= \frac{1}{\omega \cdot L} \\
+     &= \frac{1}{6283.19 \, \mathrm{rad/s} \cdot 0.1 \, \mathrm{H}} = 0.00159 \, \mathrm{S} \, = 1.59 \, \mathrm{mS}
+\end{align*}
+\begin{align*}
+    I_R &= U_\mathrm{eff} \cdot G \\
+     &= 3 \, \mathrm{V} \cdot 0.00213 \, \mathrm{S} = 0.00639 \, \mathrm{A} = 6.39 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+I_C &= U_\mathrm{eff} \cdot B_C \\
+     &= 3 \, \mathrm{V} \cdot 0.00295 \, \mathrm{S} = 0.00885 \, \mathrm{A} = 8.85 \, \mathrm{mA} 
+\end{align*}
+\begin{align*}
+I_L &= U_\mathrm{eff} \cdot B_L \\
+     &= 3 \, \mathrm{V} \cdot 0.00159 \, \mathrm{S} = 0.00477 \, \mathrm{A} = 4.77 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+Q_C &= U_\mathrm{eff} \cdot I_C \\
+     &= 3 \, \mathrm{V} \cdot 8.85 \, \mathrm{mA} = 0.02655 \, \mathrm{VA} = 26.55 \, \mathrm{mvar}
+\end{align*}
+\begin{align*}
+Q_L &= U_\mathrm{eff} \cdot I_L \\
+     &= 3 \, \mathrm{V} \cdot 4.77 \, \mathrm{mA} = 0.01431 \, \mathrm{VA} = 14.31 \, \mathrm{mvar}
+\end{align*}
+\begin{align*}
+P &= U_\mathrm{eff} \cdot I_R \\
+     &= 3 \, \mathrm{V} \cdot 6.39 \, \mathrm{mA} = 0.01917 \, \mathrm{W} = 19.17 \, \mathrm{mW}
+\end{align*}
+\begin{align*}
+I &= \sqrt{I_R^2 + (I_C - I_L)^2} \\
+     &= \sqrt{(6.39 \, \mathrm{mA})^2 + (8.85 \, \mathrm{mA} - 4.77 \, \mathrm{mA})^2} \\
+    &= \sqrt{40.83 + 16.69} = \sqrt{57.52} = 7.59 \, \mathrm{mA}
+\end{align*}
+\begin{align*}
+    S &= U_\mathrm{eff} \cdot I = 3 \, \mathrm{V} \cdot 7.59 \, \mathrm{mA} \\
+    &= 0.02277 \, \mathrm{VA} = 22.77 \, \mathrm{mVA}
+\end{align*}
+\begin{align*}
+ \cos \varphi &= \frac{P}{S} = \frac{0.01917}{0.02277} = 0.842 \, (84.2\%)
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

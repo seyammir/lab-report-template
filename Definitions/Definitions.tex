@@ -1,0 +1,59 @@
+% --- Deckblatt Definitionen ---
+\def\labtitle{Elektronische Produktentwicklung} % Titel des Labors
+\def\labcode{MECH-B-4-AED-EPE1-ILV} % Code des Labors
+\def\labname{} % Name des Labors
+\def\labnum{Nummer der Laborübung} % Nummer der Laborübung
+\def\labdate{Datum Labor} % Datum des Labors
+\def\study{Bachelor: Mechatronik Design and Innovation} % Studienrichtung
+\def\studygroup{} % Studiengruppe
+\def\term{4.} % Semesterzahl
+\def\lecturer{Rene Feldkircher} % Dozent
+\def\group{BA-MECH-24} % Studiengruppe
+\def\student{Seyam Mir Afghan, Elham Mir Afghan, Nils Brieger, Benedikt Motzet} % Studierende
+\def\contributor{}
+\def\litname{literatur} % Literaturverzeichnis
+
+% --- Kopf- und Fußzeile definieren ---
+\fancyhf{} % Alle Kopf- und Fußzeilenfelder leeren
+\fancyhead[L]{\labtitle} % Kopfzeile links
+\fancyhead[C]{} % Kopfzeile zentriert
+\fancyhead[R]{\labname} % Kopfzeile rechts
+\renewcommand{\headrulewidth}{0.4pt} % Trennlinie oben
+\fancyfoot[L]{\thepage} % Seitenzahl links
+\fancyfoot[R]{{\footnotesize\student}} % Studierende rechts
+\renewcommand{\footrulewidth}{0.4pt} % Trennlinie unten
+\setlength{\headheight}{14.49998pt} % Kopfzeilenhöhe anpassen
+\addtolength{\topmargin}{-2.49998pt} % Seitenrand ausgleichen
+
+% --- Tabellenhöhen anpassen ---
+\renewcommand{\arraystretch}{1.2} % Zeilenhöhe für Tabellen erhöhen
+
+% --- Bildunterschriften anpassen ---
+\captionsetup{belowskip=12pt, aboveskip=4pt} % Abstand über und unter Bildunterschriften
+\captionsetup{font=footnotesize} % Schriftgröße für Bildunterschriften
+
+% --- Absatzformatierung ---
+\setlength{\parindent}{0em} % Kein Einzug bei Absätzen
+\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex} % Abstand zwischen Absätzen
+
+% --- Überfüllungswarnungen minimieren ---
+\tolerance = 9999
+\sloppy
+
+% --- SI-Einheiten (siunitx Einstellungen) ---
+\sisetup{
+    output-decimal-marker={,}, % Komma als Dezimaltrennzeichen
+    per-mode=reciprocal, % Brüche im Kehrwertmodus
+    exponent-product=\cdot, % Malzeichen für Exponenten
+    retain-explicit-plus, % Pluszeichen beibehalten
+    range-phrase = {\dots}, % Bereich mit "..."
+    separate-uncertainty, % Unsicherheit getrennt anzeigen
+    list-separator={; }, % Listentrenner
+    list-final-separator={; } % Abschließender Listentrenner
+}
+
+% --- Diagrammeinstellungen (pgfplots) ---
+\pgfplotsset{
+    /pgf/number format/use comma, % Komma als Dezimaltrennzeichen
+    /pgf/number format/.cd, set thousands separator={\,} % Tausendertrennzeichen
+}

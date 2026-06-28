@@ -1,0 +1,92 @@
+\documentclass[a4paper,oneside,12pt]{article}
+
+% --- Packages ---
+\usepackage[ngerman]{babel} % Deutsche Spracheinstellungen
+\usepackage{amsmath}        % Mathematische Formeln
+\usepackage{amsfonts}       % Mathematische Schriftarten
+\usepackage{amssymb}        % Zusätzliche mathematische Symbole
+\usepackage{graphicx}       % Bilder einfügen
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref} % Verlinkungen mit Farben
+\usepackage[hidelinks]{hyperref} % Verlinkungen ohne Umrandung
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry} % Seitenränder einstellen
+\usepackage{setspace}       % Zeilenabstand anpassen
+\onehalfspacing             % 1,5-zeiliger Abstand
+\bibliographystyle{unsrtdin}   % Stil für Literaturverzeichnis
+\usepackage{siunitx}        % SI-Einheiten und Zahlenformatierung
+\usepackage{xcolor}         % Farben verwenden
+\usepackage{caption}        % Bildunterschriften anpassen
+\usepackage{subcaption}     % Mehrere Bilder nebeneinander
+\usepackage{multirow}       % Verbundene Tabellenzeilen
+\usepackage{booktabs}       % Stilvolle Tabellen
+\usepackage{fancyhdr}       % Kopf- und Fußzeilen anpassen
+\usepackage{lipsum}         % Platzhaltertext
+\usepackage{circuitikz}     % Schaltungsdiagramme
+\usepackage{pgfplots}       % Diagramme erstellen
+\pgfplotsset{compat=1.18}   % Aktuelle Kompatibilitätsversion
+\usepackage{pgfplotstable}  % CSV-Daten importieren
+\usepackage{array}          % Erweiterte Tabellenspalten
+\usepackage{float}          % Steuerung von Gleitobjekten
+\usepackage{cleveref}       % Intelligente Referenzen
+\usepackage{icomma}         % Korrekte Dezimaltrennung
+
+% --- Dokument beginnt hier ---
+\begin{document}
+
+% Definitionen laden
+\input{Definitions/Definitions} 
+
+% Deckblatt einfügen
+\pagestyle{plain} % Einfache Kopf- und Fußzeile
+\input{Sections/deckblatt.tex}
+
+% Wechsel zu Serifenschrift
+%\rmfamily
+
+\pagestyle{fancy} % Kopf- und Fußzeilen aktivieren
+
+\begin{spacing}{0.6}
+% --- Inhaltsverzeichnis ---
+\pagenumbering{Roman} % Römische Nummerierung
+\setcounter{page}{2} % Beginnt bei Seite II
+\tableofcontents % Inhaltsverzeichnis
+\newpage
+\end{spacing}
+
+%\pagestyle{fancy} % Kopf- und Fußzeilen aktivieren
+
+% --- Arabische Nummerierung für Hauptkapitel ---
+\pagenumbering{arabic} % Arabische Nummerierung
+\setcounter{page}{1} % Beginnt bei Seite 1
+
+% Kapitel einfügen
+\input{Sections/Kapitel1}
+\input{Sections/Kapitel2}
+\input{Sections/Kapitel3}
+\input{Sections/Kapitel4}
+\input{Sections/Kapitel5}
+\input{Sections/Kapitel6}
+
+% --- Verzeichnisse ---
+\newpage
+\pagenumbering{Roman} % Zurück zu römischer Nummerierung
+\setcounter{page}{3} % Setzt die Nummerierung auf III
+
+\listoffigures % Abbildungsverzeichnis
+\addcontentsline{toc}{section}{Abbildungsverzeichnis} % Hinzufügen ins Inhaltsverzeichnis
+\newpage
+
+\listoftables % Tabellenverzeichnis
+\addcontentsline{toc}{section}{Tabellenverzeichnis} % Hinzufügen ins Inhaltsverzeichnis
+\newpage
+
+% --- Literaturverzeichnis ---
+\nocite{*} % Zitieren aller Einträge, auch wenn nicht im Text referenziert
+\bibliography{Sources} % Literaturverzeichnis
+\addcontentsline{toc}{section}{Literaturverzeichnis} % Hinzufügen ins Inhaltsverzeichnis
+\newpage
+
+\begin{appendix}
+	\input{Sections/AnhangA.tex}
+\end{appendix}
+
+\end{document}
